@@ -1,4 +1,11 @@
 
+##how to deploy the application
+
+1- using sail : 
+
+
+
+
 list of api services : 
 
 1-	As a user, I should be able to create an account with a username and a password
