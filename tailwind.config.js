@@ -16,6 +16,9 @@ module.exports = {
             },
         },
     },
+    "tailwindCSS.includeLanguages": {
+        "blade": "html",
+    },
 
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
