@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OpenAiController;
+use App\Http\Controllers\SupportController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -37,4 +38,9 @@ Route::middleware([
 
 Route::get('/OpenAi',[OpenAiController::class,'OpenAi'])->name("OpenAi");
 Route::get('/ai',[OpenAiController::class,'AI']);
+Route::get('/generateCode',[OpenAiController::class,'generateCode']);
+
+Route::get('/support',[SupportController::class,'index']);
+
+
 
