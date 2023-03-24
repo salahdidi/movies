@@ -10,5 +10,10 @@ class SupportController extends Controller
     {
         return Inertia::render('Support', []);
     }
+
+    public function page1()
+    {
+        return Inertia::render('Support/MissionVendeur', []); 
+    }
     
 }

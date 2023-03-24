@@ -42,5 +42,8 @@ Route::get('/generateCode',[OpenAiController::class,'generateCode']);
 
 Route::get('/support',[SupportController::class,'index']);
 
+Route::get('support/page1',[SupportController::class,'page1'])->name('page1');
+
+
 
 

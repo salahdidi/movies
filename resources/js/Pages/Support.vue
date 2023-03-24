@@ -1,44 +1,48 @@
 <template>
    
-    <div>
-        <a href="https://test.datafirst-dz.com/" style="color: white">
+    <div v-if="showParent" >
+    
+        <a href="${currentUrl}" style="color: white">
             <img src="redArrow.webp" height="50" width="50" style="border-radius: 100px" />
             Retour
         </a>
         <h1 class="font-weight-bold text-center" style="color: white">
             ESPACE SUPPORT
         </h1>
-        <div class="options-buttons" style="margin-top: 30px ;display :block ;margin-left: 30%;margin-right: 30%;">
-            <button class="btn" style="font-weight: 200px"
+        <div class="options-buttons" >
+            <button class="btn" 
                 @click="changeVendeurMission">
                 Changer vendeur d'une mission
             </button>
-            <button class="btn" style="font-weight: 200px"
+            <button class="btn" 
                 @click="addMissionException">
                 Mission exception
             </button>
-            <button class="btn" style="font-weight: 200px"
+            <button class="btn" 
                 @click="exportChargementProduit">
                 Etat de chargement par camion
             </button>
-            <button class="btn" style="font-weight: 200px"
+            <button class="btn" 
                 @click="correctPrixMissionVente">
                 Correction des prix d'une mission de vente
             </button>
-            <button class="btn" style="font-weight: 200px"
+            <button class="btn" 
                 @click="updateBalanceVendeur">
                 Mise a jour de la Balance vendeur
             </button>
-            <button class="btn" style="font-weight: 200px"
+            <button class="btn" 
                 @click="changeReglementEcartLivreur">
                 Changer le vendeur dans un reglement d'ecart
             </button>
-            <button class="btn" style="font-weight: 200px"
+            <button class="btn" 
                 @click="changeVendeurEncaissement">
                 Changer le vendeur dans un encaissement
             </button>
         </div>
     </div>
+    
+
+    
 </template>
 <style>
 body {
@@ -46,39 +50,49 @@ body {
        background-color: rgb(15 23 42/var(--tw-bg-opacity));
     }
     .options-buttons{
-        display: block;
         
-       background-color: rgb(145, 241, 241);
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        align-items: center;
+        /* position: absolute; */
+        /* left: 30%; */
+        /* right: 30%; */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);     
     }
 
     .btn{
         display: block;
         align-content: center;
-        margin : 5px;
-        color: #291515;
+        margin: 5px;
+        color: #f3f4f6;
         transition: all 0.5s;
-        position: relative; 
+        position: relative;
         line-height: 50px;
         height: 50px;
         white-space: nowrap;
         width: 350px;
         cursor: pointer;
+        font-weight: 200px;
         
         
     }  
     
     .btn-two::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid rgba(255,255,255,0.2);
-  background-color: rgba(255,255,255,0.1);
-}
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        border: 1px solid rgba(255,255,255,0.2);
+        background-color: rgba(255,255,255,0.1);
+        }
 .btn::after {
   content: '';
   position: absolute;
@@ -102,11 +116,26 @@ body {
 </style>
 
 <script>
+
+
+      
+
+
     export default {
+        
+        data() {
+            return {
+            showParent: true
+            }
+        },
+  
         methods: {
             changeVendeurMission() {
-                window.location.href =
-                    "https://test.datafirst-dz.com/support/editVendeurOfMission.blade.php";
+                //this.showParent = false;
+                
+                window.location.href =route('page1');
+               // this.$router.go('/page1');
+                
             },
             addMissionException() {
                 window.location.href =

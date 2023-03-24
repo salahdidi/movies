@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "filament/filament": "^2.0",
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.2",
         "inertiajs/inertia-laravel": "^0.5.2",
@@ -16,9 +17,11 @@
         "laravel/tinker": "^2.7",
         "openai-php/laravel": "^0.3.4",
         "reliese/laravel": "^1.1",
+        "techindeck/laravel-module-generator": "^1.1",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
+        "appzcoder/crud-generator": "^3.3",
         "fakerphp/faker": "^1.9.1",
         "kitloong/laravel-migrations-generator": "^6.8",
         "laravel/pint": "^1.6",

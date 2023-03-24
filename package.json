@@ -26,6 +26,7 @@
         "vue-loader": "^17.0.0"
     },
     "dependencies": {
-        "@inertiajs/react": "^1.0.2"
+        "@inertiajs/react": "^1.0.2",
+        "vue-router": "^4.1.6"
     }
 }
